@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/root_layout_padding"
+    tools:context="sampleapp.com.spacestationfinder.SpaceStationPassActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/data_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/latitude_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/view_margin"
+                    android:hint="@string/latitude_hint"
+                    android:inputType="numberSigned" />
+
+                <EditText
+                    android:id="@+id/longitude_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/view_margin"
+                    android:hint="@string/longitude_hint"
+                    android:inputType="numberSigned" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/altitude_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/view_margin"
+                    android:hint="@string/altitude_hint"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/passes_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/no.of_passes_hint"
+                    android:inputType="number" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/device_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/data_container"
+            android:layout_margin="@dimen/view_margin"
+            android:text="@string/device_location_text" />
+
+        <Button
+            android:id="@+id/load_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/data_container"
+            android:layout_margin="@dimen/view_margin"
+            android:text="@string/load_text" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/iss_passes_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/view_margin"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

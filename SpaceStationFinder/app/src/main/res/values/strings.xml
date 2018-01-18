@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SpaceStationFinder</string>
+
+
+
+    <string name="longitude_hint">Enter Longtitude</string>
+    <string name="latitude_hint">Enter Latitude</string>
+    <string name="altitude_hint">Enter Altitude</string>
+    <string name="no.of_passes_hint">Enter No. of Passes</string>
+    <string name="device_location_text">Use your location</string>
+    <string name="load_text">Reload</string>
+    <string name="retry_text">Try Again</string>
+
+
+    <string name="time_stamp">Time :</string>
+    <string name="duration">Duration :</string>
+
+
+
+
+</resources>
